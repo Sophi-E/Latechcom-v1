@@ -30,11 +30,6 @@ const Register = () => {
 
   const { error, name, email, state, city, education, experience } = user;
 
-  // const isInvalid =
-  //   passwordOne !== passwordTwo ||
-  //   passwordOne === "" ||
-  //   email === "" ||
-  //   username === "";
   return (
     <Wrap2>
       <div className="registerWrapper">
