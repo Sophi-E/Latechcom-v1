@@ -5,6 +5,11 @@ import FormWrapper from "./formComp";
 import FormInput from "./input";
 import { Container } from "react-bootstrap";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const initialState = {
   name: "",
@@ -94,11 +99,11 @@ const Register = () => {
           </FormWrapper>
           <hr />
           <div className="socialsContainer">
-            <FontAwesomeIcon icon={faPhone} className="socials" />
+            <FontAwesomeIcon icon={faTwitter} className="socials" />
 
-            <FontAwesomeIcon icon={faPhone} className="socials" />
+            <FontAwesomeIcon icon={faInstagram} className="socials" />
 
-            <FontAwesomeIcon icon={faPhone} className="socials" />
+            <FontAwesomeIcon icon={faLinkedin} className="socials" />
           </div>
         </Container>
       </div>
