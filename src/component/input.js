@@ -3,16 +3,44 @@ import PropTypes from "prop-types";
 
 import styled from "@emotion/styled";
 
+const Label = styled.label`
+  margin: 0.5em 0;
+  color: #fff;
+`;
 const Input = styled("input")`
   /* font-size: ${(props) => props.size}; */
-  width: 100%;
-  padding: 8px;
-  margin: 10px 0;
-  background-color: #eee;
+  padding: 0.6em 1em;
+  background: #ffffff13;
   border: none;
-  border-radius: 5px;
-  &:hover {
-    border: 1px solid blueviolet;
+  border-bottom: 1px #a30d83 solid;
+  color: #fff;
+  /* margin-top: 0.2em; */
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+  transition: 0.073s ease-in;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  :hover,
+  :focus {
+    background: #ffffff23;
+    /* border: none; */
+    border-radius: 4px;
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #ccc;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #ccc;
   }
 `;
 
@@ -29,7 +57,7 @@ const FormInput = ({
 }) => {
   return (
     <>
-      <label htmlFor={name}>{label}</label>
+      <Label htmlFor={name}>{label}</Label>
       <Input
         required
         // size='1em'

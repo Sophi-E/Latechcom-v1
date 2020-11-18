@@ -26,12 +26,6 @@ const StyledProgramDiv = styled.div`
   }
 
   .iconWrap {
-    /* padding: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #004aad; */
-    /* margin: 5em 0 !important; */
   }
   .try {
     font-size: 38px;

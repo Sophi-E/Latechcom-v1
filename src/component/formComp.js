@@ -9,14 +9,14 @@ const Form = styled("form")`
   /* text-align: center; */
 `;
 const Button = styled("button")`
-  background-color: #ccc;
-  width: 100%;
-  padding: 8px 15px;
+  background: #ffffff13;
+  color: #fff;
+  padding: 10px 50px;
   margin: 20px 0;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #fff;
+  border-radius: 30px;
   &:hover {
-    background-color: blue;
+    background-color: #ccc;
     color: #000;
   }
   &:disabled {
