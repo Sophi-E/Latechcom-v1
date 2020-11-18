@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Image from "react-bootstrap/Image";
 import bg from "./bg.jpg";
 
 const Header = () => {

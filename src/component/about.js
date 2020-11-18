@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import code from "./code.jpg";
 import man from "./man.jpg";
 import { Container } from "react-bootstrap";
 

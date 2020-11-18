@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import {
-  faCoffee,
   faLaptopCode,
   faPaintBrush,
   faPhotoVideo,

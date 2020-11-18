@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
-import { AboutContainer } from "./about";
 import FormWrapper from "./formComp";
 import FormInput from "./input";
 import { Container } from "react-bootstrap";
@@ -24,16 +23,7 @@ const Register = () => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const {
-    submitted,
-    error,
-    name,
-    email,
-    state,
-    city,
-    education,
-    experience,
-  } = user;
+  const { error, name, email, state, city, education, experience } = user;
 
   // const isInvalid =
   //   passwordOne !== passwordTwo ||
