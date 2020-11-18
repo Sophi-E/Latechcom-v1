@@ -36,7 +36,8 @@ const StyledProgramDiv = styled.div`
     height: 100px;
     padding: 30px 0;
     border-radius: 50%;
-    background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+    /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%); */
+    background: #004aad;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
   }
   h4 {

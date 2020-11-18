@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
+import AOS from "aos";
+
 import FormWrapper from "./formComp";
 import FormInput from "./input";
 import { Container } from "react-bootstrap";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
   faLinkedin,
@@ -22,6 +23,8 @@ const initialState = {
   submitted: false,
 };
 
+AOS.init();
+
 const Register = () => {
   const [user, setUser] = useState(initialState);
   const handleChange = (e) => {
@@ -32,11 +35,15 @@ const Register = () => {
 
   return (
     <Wrap2>
-      <div className="registerWrapper">
-        <Container>
+      <Container>
+        <div className="registerWrapper">
+          <h2 className="register">JOIN US</h2>
           <FormWrapper label="SIGN UP">
-            <h2>JOIN US</h2>
-            <FormFlex>
+            <FormFlex
+              data-aos="zoom-in"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <div>
                 <FormInput
                   label="Full Name"
@@ -100,8 +107,8 @@ const Register = () => {
 
             <FontAwesomeIcon icon={faLinkedin} className="socials" />
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </Wrap2>
   );
 };
@@ -109,13 +116,18 @@ const Register = () => {
 export default Register;
 
 const Wrap2 = styled.div`
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-
+  /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%); */
+  background: #004aad;
   padding: 8em 0 4em 0;
 
+  .registerWrapper {
+    background: #ffffff13;
+    padding: 2em;
+    border-radius: 5px;
+  }
   h2 {
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 15px;
     color: #fff;
   }
 
@@ -150,7 +162,7 @@ const FormFlex = styled.div`
   display: flex;
   justify-content: space-between;
   div {
-    width: 540px;
+    width: 500px;
   }
   @media (max-width: 700px) {
     flex-direction: column;

@@ -14,8 +14,8 @@ const Input = styled("input")`
   border: none;
   border-bottom: 1px #a30d83 solid;
   color: #fff;
-  /* margin-top: 0.2em; */
-  margin-bottom: 0.5em;
+  margin-top: 0.2em;
+  margin-bottom: 0.3em;
   font-size: 0.9rem;
   transition: 0.073s ease-in;
   border-radius: 4px 4px 0 0;

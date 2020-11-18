@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 const Form = styled("form")`
   width: 100%;
+
   padding: 10px;
   /* margin: 0 auto; */
   box-sizing: border-box;

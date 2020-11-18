@@ -1,5 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
+import AOS from "aos";
+
 import {
   faLaptopCode,
   faPaintBrush,
@@ -9,9 +11,11 @@ import ProgramCard from "./programCard";
 import styled from "@emotion/styled";
 import { AboutContainer } from "./about";
 
+AOS.init();
+
 const Programs = () => {
   return (
-    <Wrap>
+    <Wrap data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
       <AboutContainer>
         <h2>PROGRAMS</h2>
         <Container>

@@ -1,7 +1,10 @@
 import React from "react";
+import AOS from "aos";
 import styled from "@emotion/styled";
 import man from "./man.jpg";
 import { Container } from "react-bootstrap";
+
+AOS.init();
 
 const About = () => {
   return (
@@ -9,10 +12,20 @@ const About = () => {
       <AboutContainer>
         <h2>ABOUT US</h2>
         <FlexWrapper>
-          <div className="imgDiv">
+          <div
+            className="imgDiv"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <img src={man} alt="a man using his laptop" />
           </div>
-          <div className="abtDiv">
+          <div
+            className="abtDiv"
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <p>
               "We are a community of developers who have come together to
               provide free mentorship, guidance and learning resources for new
@@ -74,7 +87,8 @@ export const AboutContainer = styled.div`
 
   h2 {
     text-align: center;
-    padding-bottom: 2em;
+    padding-bottom: 15px;
+    margin-bottom: 2em;
   }
 
   @media (max-width: 700px) {
