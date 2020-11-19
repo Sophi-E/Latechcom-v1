@@ -8,7 +8,7 @@ AOS.init();
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <AboutContainer>
         <h2>ABOUT US</h2>
         <FlexWrapper>

@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
 import AOS from "aos";
-
+import Axios from "axios";
 import FormWrapper from "./formComp";
 import FormInput from "./input";
-import { Container } from "react-bootstrap";
+import { Container, Alert } from "react-bootstrap";
 import {
   faInstagram,
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+
+AOS.init();
 
 const initialState = {
   name: "",
@@ -19,26 +21,51 @@ const initialState = {
   city: "",
   education: "",
   experience: "",
-  error: null,
-  submitted: false,
 };
 
-AOS.init();
+const Endpoint =
+  "https://rocky-scrubland-02917.herokuapp.com/leaner/registration";
 
 const Register = () => {
   const [user, setUser] = useState(initialState);
+  const [show, setShow] = useState(false);
+
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const { error, name, email, state, city, education, experience } = user;
+  const { name, email, state, city, education, experience } = user;
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    Axios.post(Endpoint, user)
+      .then((res) => console.log(res.request.status))
+      .catch((err) => console.error(err));
+
+    setTimeout(() => {
+      setUser(initialState);
+      setShow(true);
+    }, 2000);
+  };
 
   return (
-    <Wrap2>
+    <Wrap2 id="register">
       <Container>
         <div className="registerWrapper">
           <h2 className="register">JOIN US</h2>
-          <FormWrapper label="SIGN UP">
+
+          {show ? (
+            <Alert variant="success" onClose={() => setShow(false)} dismissible>
+              <p>Registration Successful!</p>
+            </Alert>
+          ) : (
+            <p className="notice">
+              We are excited to have you in the community. Please, register
+              below.
+            </p>
+          )}
+
+          <FormWrapper label="REGISTER" onSubmit={handleFormSubmit}>
             <FormFlex
               data-aos="zoom-in"
               data-aos-easing="linear"
@@ -96,16 +123,21 @@ const Register = () => {
                   onChange={handleChange}
                 />
               </div>
-              {user.error && <p>{error.message}</p>}
             </FormFlex>
           </FormWrapper>
           <hr />
           <div className="socialsContainer">
-            <FontAwesomeIcon icon={faTwitter} className="socials" />
+            <a href="https://twitter.com/latechcom">
+              <FontAwesomeIcon icon={faTwitter} className="socials" />
+            </a>
 
-            <FontAwesomeIcon icon={faInstagram} className="socials" />
+            <a href="https://instagram.com/latechcomm">
+              <FontAwesomeIcon icon={faInstagram} className="socials" />
+            </a>
 
-            <FontAwesomeIcon icon={faLinkedin} className="socials" />
+            <a href="https://linkedin.com/latechcom">
+              <FontAwesomeIcon icon={faLinkedin} className="socials" />
+            </a>
           </div>
         </div>
       </Container>
@@ -130,9 +162,17 @@ const Wrap2 = styled.div`
     padding-bottom: 15px;
     color: #fff;
   }
-
+  .notice {
+    color: #ccc;
+    padding: 1em;
+  }
   @media (max-width: 700px) {
     padding: 2.5em 0;
+
+    .registerWrapper {
+      padding: none;
+      background: none;
+    }
   }
 
   .socialsContainer {

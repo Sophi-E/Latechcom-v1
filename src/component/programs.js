@@ -15,7 +15,12 @@ AOS.init();
 
 const Programs = () => {
   return (
-    <Wrap data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+    <Wrap
+      data-aos="fade-up"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+      id="programs"
+    >
       <AboutContainer>
         <h2>PROGRAMS</h2>
         <Container>
@@ -23,13 +28,13 @@ const Programs = () => {
             <ProgramCard
               icon={faLaptopCode}
               title="Web Development"
-              text="Learn the basics of web development. Learn how to create beautiful and ."
+              text="Learn the basics of web development. Learn how to create beautiful and responsive websites right from your home."
             />
 
             <ProgramCard
               icon={faPhotoVideo}
               title="App Development"
-              text="Learn how to develop mobile applications online with free mentorship from exp."
+              text="Learn how to develop mobile applications online with free mentorship from experienced developers."
             />
 
             <ProgramCard

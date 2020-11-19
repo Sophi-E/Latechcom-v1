@@ -47,3 +47,7 @@ h2::before {
 hr {
   border-top: 1px solid #ffffff23;
 }
+
+a {
+  text-decoration: none;
+}

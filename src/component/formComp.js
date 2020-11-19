@@ -20,20 +20,13 @@ const Button = styled("button")`
     background-color: #ccc;
     color: #000;
   }
-  &:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
 `;
 
-const FormWrapper = ({ children, label, onSubmit, isInvalid }) => {
+const FormWrapper = ({ children, label, onSubmit }) => {
   return (
     <Form onSubmit={onSubmit}>
       {children}
-      {/* <Button type='submit' label={label} className='button' /> */}
-      <Button type="submit" disabled={isInvalid}>
-        {label}
-      </Button>
+      <Button type="submit">{label}</Button>
     </Form>
   );
 };
