@@ -73,7 +73,7 @@ const FlexWrapper = styled.div`
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     .abtDiv {
       width: 100%;

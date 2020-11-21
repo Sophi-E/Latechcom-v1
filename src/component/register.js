@@ -54,16 +54,9 @@ const Register = () => {
         <div className="registerWrapper">
           <h2 className="register">JOIN US</h2>
 
-          {show ? (
-            <Alert variant="success" onClose={() => setShow(false)} dismissible>
-              <p>Registration Successful!</p>
-            </Alert>
-          ) : (
-            <p className="notice">
-              We are excited to have you in the community. Please, register
-              below.
-            </p>
-          )}
+          <p className="notice">
+            We are excited to have you in the community. Please, register below.
+          </p>
 
           <FormWrapper label="REGISTER" onSubmit={handleFormSubmit}>
             <FormFlex
@@ -125,6 +118,11 @@ const Register = () => {
               </div>
             </FormFlex>
           </FormWrapper>
+          {show && (
+            <Alert variant="success" onClose={() => setShow(false)} dismissible>
+              <p>Registration Successful!</p>
+            </Alert>
+          )}
           <hr />
           <div className="socialsContainer">
             <a href="https://twitter.com/latechcom">

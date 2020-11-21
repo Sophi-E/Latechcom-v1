@@ -27,20 +27,20 @@ const Programs = () => {
           <ProgramsWrapper>
             <ProgramCard
               icon={faLaptopCode}
-              title="Web Development"
-              text="Learn the basics of web development. Learn how to create beautiful and responsive websites right from your home."
+              title="Tech Mentorship"
+              text="We provide mentorship and guidance for people in the tech space finding it difficult or just need someone to hold their hands every once a while."
             />
 
             <ProgramCard
               icon={faPhotoVideo}
-              title="App Development"
-              text="Learn how to develop mobile applications online with free mentorship from experienced developers."
+              title="Software Development"
+              text="Come learn how to develop web and mobile applications online from experienced developers in our software development program."
             />
 
             <ProgramCard
               icon={faPaintBrush}
               title="Product Design"
-              text="Learn how to create aesthetically pleasing products free with mentors at Latechcom."
+              text="Have you always had a eye for colors and layout? You can learn how to create aesthetically pleasing product designs free with instructors at Latechcom."
             />
           </ProgramsWrapper>
         </Container>

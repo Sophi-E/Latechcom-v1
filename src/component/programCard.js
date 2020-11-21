@@ -19,10 +19,12 @@ export default ProgramCard;
 const StyledProgramDiv = styled.div`
   /* text-align: center; */
   width: 300px;
+  height: 350px;
 
   @media (max-width: 700px) {
     width: 100%;
     padding: 2em 0;
+    height: auto;
   }
 
   .iconWrap {
